@@ -1,0 +1,224 @@
+.hero {
+    background: url('imagenes/banner\ 2_Mesa\ de\ trabajo\ 1.png') no-repeat center center;
+    background-size: cover;
+    min-height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff7ae;
+    position: relative;
+    text-align: right;
+    padding: 20px;
+    
+}
+
+
+.overlay-image {
+    position: absolute;
+    top: 5; /* Alinea la imagen con la parte superior del contenedor */
+    left: 55px; /* Alinea la imagen con la parte izquierda del contenedor */
+    width: 175px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: auto;
+    z-index: 2; /* Asegura que esté sobre el fondo */
+    background: none; /* Elimina cualquier fondo en la imagen */
+}
+
+@media (max-width: 768px) {
+    .hero {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .overlay-image {
+        width: 0px; /* Ajusta el tamaño en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        min-height: 50vh;
+    }
+
+    .overlay-image {
+        width: 0px; /* Ajusta el tamaño para pantallas muy pequeñas */
+    }
+}
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    animation: textGlow 2s infinite alternate;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes textGlow {
+    from {
+        text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.8);
+    }
+    to {
+        text-shadow: 2px 2px 8px rgba(255, 215, 0, 1);
+    }
+}
+
+/* Estilos para secciones y botones */
+.section-title {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: 'Playfair Display', serif;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    border-radius: 50px;
+    padding: 10px 20px;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Estilos para el pie de página */
+.footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px 0;
+}
+
+/* Estilos para las tarjetas */
+.card {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Estilos para el texto elegante */
+.elegant-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Estilos para la sección de historia */
+.carousel {
+    width: 100%; /* Ajusta el ancho según tus necesidades */
+    max-width: 800px; /* Establece un ancho máximo */
+    margin: 0 auto; /* Centra el carrusel horizontalmente */
+}
+
+.history-section {
+    padding: 60px 0;
+}
+
+.history-img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.history-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-inner {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* Estilos para los controles del carrusel */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    background-size: 50%;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Estilos para los botones flotantes para el scroll */
+.btn-floating {
+    position: fixed;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-floating:hover {
+    background-color: #0056b3;
+}
+
+#scrollTop {
+    bottom: 80px;
+    right: 20px;
+}
+
+#scrollDown {
+    bottom: 20px;
+    right: 20px;
+}
+
+.fas.fa-arrow-up,
+.fas.fa-arrow-down {
+    font-size: 1.5rem;
+}

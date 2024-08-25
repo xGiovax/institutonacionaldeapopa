@@ -1,0 +1,127 @@
+.hero {
+    background: url('imagenes/banner\ 2_Mesa\ de\ trabajo\ 1.png') no-repeat center center;
+    background-size: cover;
+    min-height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff7ae;
+    position: relative;
+    text-align: right;
+    padding: 20px;
+    
+}
+
+
+.overlay-image {
+    position: absolute;
+    top: 5; /* Alinea la imagen con la parte superior del contenedor */
+    left: 55px; /* Alinea la imagen con la parte izquierda del contenedor */
+    width: 175px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: auto;
+    z-index: 2; /* Asegura que esté sobre el fondo */
+    background: none; /* Elimina cualquier fondo en la imagen */
+}
+
+@media (max-width: 768px) {
+    .hero {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .overlay-image {
+        width: 0px; /* Ajusta el tamaño en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        min-height: 50vh;
+    }
+
+    .overlay-image {
+        width: 0px; /* Ajusta el tamaño para pantallas muy pequeñas */
+    }
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    font-family: 'Playfair Display', serif;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+@keyframes textGlow {
+    from {
+        text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.8);
+    }
+    to {
+        text-shadow: 2px 2px 8px rgba(255, 215, 0, 1);
+    }
+}
+.hero p {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.section-title {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: 'Playfair Display', serif;
+}
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    border-radius: 50px;
+    padding: 10px 20px;
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+.footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px 0;
+}
+.form-section {
+    padding: 60px 0;
+}
+.form-control, .select2-container--bootstrap-5 .select2-selection--single {
+    border-radius: 15px;
+}
+.btn-floating {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    margin-bottom: 10px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+#scrollDown {
+    bottom: 70px;
+}
